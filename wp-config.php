@@ -3,16 +3,16 @@
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'ecap_wp_db');
+define('DB_NAME', getenv('mu_wordpress_db_name'));
 
 /** MySQL database username */
-define('DB_USER', 'egtlabsecap');
+define('DB_USER', getenv('mu_wordpress_db_user'));
 
 /** MySQL database password */
-define('DB_PASSWORD', '6cc7c5a5a21978');
+define('DB_PASSWORD', getenv('mu_wordpress_db_password'));
 
 /** MySQL hostname */
-define('DB_HOST', 'egtlabsecap.ciq9ul9lvuj5.us-east-1.rds.amazonaws.com');
+define('DB_HOST', getenv('mu_wordpress_db_host'));
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -39,7 +39,7 @@ $table_prefix = 'wp_';
 define('MULTISITE', true);
 define('SUBDOMAIN_INSTALL', false);
 $base = '/';
-define('DOMAIN_CURRENT_SITE', 'cap.egt-labs.com');
+define('DOMAIN_CURRENT_SITE', getenv('mu_wordpress_domain'));
 define('PATH_CURRENT_SITE', '/');
 define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
